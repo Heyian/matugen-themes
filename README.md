@@ -59,6 +59,9 @@
 - [Zed](#zed)
 - [Wofi](#wofi)
 - [SwayNC](#swaync)
+- [Steam](#steam)
+- [OBS](#obs)
+- [Telegram](#telegram)
 
 ### Alacritty
 ```toml
@@ -801,6 +804,44 @@ Then import the `colors.css` to `~/.config/swaync/style.css`:
 ```css
 @import "colors.css";
 ```
+### Steam
+```toml
+[config]
+# ...
+[templates.steam]
+input_path = 'path/to/template'
+output_path = '~/.config/AdwSteamGtk/custom.css'
+post_hook =  'adwaita-steam-gtk -i'
+# ...
+```
+**IMPORTANT:** Template needs `adwsteamgtk` to work.
+
+### OBS
+```toml
+[config]
+# ...
+[templates.obs]
+input_path = 'path/to/template'
+output_path = '~/.config/obs-studio/themes/matugen.obt'
+# ...
+```
+After: Open OBS > File > Settings > Appearance > Theme > Matugen
+
+### Telegram
+```toml
+[config]
+# ...
+[templates.telegram]
+input_path = 'path/to/template'
+output_path = 'out/path'
+# ...
+```
+**IMPORTANT:** Telegram does not support automatically applying themes.  
+To apply a theme, follow these steps:  
+1. Open Telegram.  
+2. Drag and drop the theme file into any chat.  
+3. Send the file.  
+4. Open the sent file and apply the theme.
 
 <h2 class="acknowledgements">
      <sub>
